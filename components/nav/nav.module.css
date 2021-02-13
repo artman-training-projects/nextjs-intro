@@ -13,3 +13,7 @@
 .container a:hover {
   color: fuchsia;
 }
+
+.help {
+  margin-left: auto;
+}
