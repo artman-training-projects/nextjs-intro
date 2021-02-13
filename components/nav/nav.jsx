@@ -8,6 +8,10 @@ export default function Nav() {
       <Box display="flex" component="nav">
         <Link href="/">Note App</Link>
         <Link href="/notes">Notes</Link>
+
+        <a href={process.env.HELP_APP_URL} className={styles.help}>
+          Help
+        </a>
       </Box>
     </Container>
   );
