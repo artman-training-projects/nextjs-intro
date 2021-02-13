@@ -1,25 +1,21 @@
-import { roboto } from "@theme-ui/presets";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { red } from "@material-ui/core/colors";
 
-const theme = {
-  ...roboto,
-  containers: {
-    card: {
-      boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
-      border: "1px solid",
-      borderColor: "muted",
-      borderRadius: "4px",
-      p: 2,
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#556cd6",
     },
-    page: {
-      width: "100%",
-      maxWidth: "960px",
-      m: 0,
-      mx: "auto",
+    secondary: {
+      main: "#19857b",
+    },
+    error: {
+      main: red.A400,
+    },
+    background: {
+      default: "#fff",
     },
   },
-  styles: {
-    ...roboto.styles,
-  },
-};
+});
 
 export default theme;

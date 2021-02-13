@@ -2,17 +2,16 @@
   "name": "nextjs-intro",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "Unlicense",
+  "license": "The Unlicense",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@theme-ui/presets": "^0.3.5",
+    "@material-ui/core": "^4.11.3",
     "next": "^10.0.6",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "theme-ui": "^0.3.5"
+    "react-dom": "^17.0.1"
   }
 }

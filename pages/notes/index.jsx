@@ -1,5 +1,6 @@
-import { jsx } from "theme-ui";
 import Link from "next/link";
+import { Paper, Container, Grid } from "@material-ui/core";
+import styles from "./notes.module.css";
 
 export default function Notes() {
   const notes = new Array(15)
@@ -7,29 +8,20 @@ export default function Notes() {
     .map((e, i) => ({ id: i, title: `This is my note ${i}` }));
 
   return (
-    <div sx={{ variant: "containers.page" }}>
+    <Container maxWidth={"md"}>
       <h1>My Notes</h1>
 
-      <div
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-        }}
-      >
+      <Grid container spacing={3}>
         {notes.map((note) => (
-          <div sx={{ width: "33%", p: 2 }}>
-            <Link key={note.id} href="/notes/[id]" as={`/notes/${note.id}`}>
-              <a sx={{ textDecoration: "none", cursor: "pointer" }}>
-                <div sx={{ variant: "containers.card" }}>
-                  <strong>{note.title}</strong>
-                </div>
-              </a>
-            </Link>
-          </div>
+          <Grid key={note.id} item xs={12} sm={6} md={4}>
+            <Paper className={styles.paper} variant={"outlined"}>
+              <Link href="/notes/[id]" as={`/notes/${note.id}`}>
+                {note.title}
+              </Link>
+            </Paper>
+          </Grid>
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Container>
   );
 }

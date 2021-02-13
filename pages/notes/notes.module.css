@@ -1,0 +1,11 @@
+.paper {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}

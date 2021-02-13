@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+}
+
+.container a {
+  margin-right: 30px;
+  color: navy;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: fuchsia;
+}
