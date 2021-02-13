@@ -2,11 +2,7 @@ import Link from "next/link";
 import { Paper, Container, Grid } from "@material-ui/core";
 import styles from "./notes.module.css";
 
-export default function Notes() {
-  const notes = new Array(15)
-    .fill("")
-    .map((e, i) => ({ id: i, title: `This is my note ${i}` }));
-
+export default function Notes({ notes }) {
   return (
     <Container maxWidth={"md"}>
       <h1>My Notes</h1>
@@ -24,4 +20,13 @@ export default function Notes() {
       </Grid>
     </Container>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/note/`);
+  const { data } = await res.json();
+
+  return {
+    props: { notes: data },
+  };
 }
