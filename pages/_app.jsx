@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Container } from "@material-ui/core";
-import theme from "../theme";
+import theme from "../src/theme";
 import Nav from "../components/nav/nav";
 
 export default function App({ Component, pageProps }) {
